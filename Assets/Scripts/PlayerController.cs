@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject != gameObject)
         {
-            Debug.Log("Te has dado la vuelta");
+            Debug.Log("Has perdido");
         }
     }
 
