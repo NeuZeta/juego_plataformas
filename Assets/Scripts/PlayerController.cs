@@ -5,25 +5,36 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float velocidadRotacion = 50;
-    public float velocidadLineal = 1f;
+    public float velocidadLineal = 15f;
     Rigidbody2D rigidbody;
 
+    public Transform ruedaTrasera;
+    private float radioRueda;
+
+   
 
 
-	void Start () {
-        rigidbody = GetComponent<Rigidbody2D>();	
+
+
+    void Start () {
+        rigidbody = GetComponent<Rigidbody2D>();
+        radioRueda = ruedaTrasera.GetComponent<CircleCollider2D>().radius + 0.01f;
 	}
 	
     public void MoveRight()
     {
-        //rigidbody.velocity += new Vector2(transform.right.x * velocidadLineal, transform.right.y * velocidadLineal) * Time.deltaTime;      
-        rigidbody.velocity += new Vector2(transform.right.x * velocidadLineal, 0f);
-
+        if (TocaElSuelo())
+        {
+            rigidbody.velocity += new Vector2(transform.right.x * velocidadLineal, transform.right.y * velocidadLineal) * Time.deltaTime;
+        }
     }
 
     public void MoveLeft()
     {
-        rigidbody.velocity -= new Vector2(transform.right.x * velocidadLineal, 0f);
+        if (TocaElSuelo())
+        {
+            rigidbody.velocity -= new Vector2(transform.right.x * velocidadLineal, transform.right.y * velocidadLineal) * Time.deltaTime;
+        }
     }
 
     public void RotateRight()
@@ -39,7 +50,7 @@ public class PlayerController : MonoBehaviour {
  
     void Update () {
 
-
+    
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             MoveLeft();
@@ -57,5 +68,29 @@ public class PlayerController : MonoBehaviour {
             RotateRight();
         }
 
-	}
-}
+    
+    }
+
+    bool TocaElSuelo() {
+        if (Physics2D.OverlapCircleAll(ruedaTrasera.position, radioRueda).Length > 2)
+        {
+            Debug.Log("tocando");
+            return true;
+        } else {
+            Debug.Log("flotando");
+            return false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject != gameObject)
+        {
+            Debug.Log("Te has dado la vuelta");
+        }
+    }
+
+
+
+}//PlayerController
+
