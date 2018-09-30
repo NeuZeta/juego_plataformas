@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameplayController : MonoBehaviour {
+public class Level3Controller : MonoBehaviour {
     private PlayerController player;
 
     public Text recordText;
@@ -31,7 +31,7 @@ public class GameplayController : MonoBehaviour {
         player.enabled = false;
         mainText = startButton.GetComponentInChildren<Text>();
 
-        timeRecord = GameController.instance.GetHighscoreLevel1();
+        timeRecord = GameController.instance.GetHighscoreLevel3();
 
         if (timeRecord > 0)
         {
@@ -79,23 +79,21 @@ public class GameplayController : MonoBehaviour {
 
     private void EndLevel()
     {
-        GameController.instance.UnlockedLevel2();
-
         player.enabled = false;
+
+        StartCoroutine(WaitToShowVictoryPanel());
 
         gameTime = (Time.time - tiempoInicial);
 
         if (timeRecord == 0) {
-            GameController.instance.SetHighscoreLevel1(gameTime);
+            GameController.instance.SetHighscoreLevel3(gameTime);
         } else if (gameTime < timeRecord)
         {
-            GameController.instance.SetHighscoreLevel1(gameTime);
+            GameController.instance.SetHighscoreLevel3(gameTime);
         }
 
         scoreText.text = gameTime.ToString();
-        highscoreText.text = GameController.instance.GetHighscoreLevel1().ToString("##.##");
-
-        StartCoroutine(WaitToShowVictoryPanel());
+        highscoreText.text = GameController.instance.GetHighscoreLevel3().ToString("##.##");
     }
 
     public void PauseGame()

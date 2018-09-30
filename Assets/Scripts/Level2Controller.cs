@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameplayController : MonoBehaviour {
+public class Level2Controller : MonoBehaviour {
     private PlayerController player;
 
     public Text recordText;
@@ -14,11 +14,9 @@ public class GameplayController : MonoBehaviour {
 
     private float gameTime, timeRecord;
 
-    [SerializeField]
-    private GameObject pausePanel, victoryPanel;
+    public GameObject pausePanel, victoryPanel;
 
-    [SerializeField]
-    private Text scoreText, highscoreText;
+    public Text scoreText, highscoreText;
 
     private void Start () {
 
@@ -31,7 +29,7 @@ public class GameplayController : MonoBehaviour {
         player.enabled = false;
         mainText = startButton.GetComponentInChildren<Text>();
 
-        timeRecord = GameController.instance.GetHighscoreLevel1();
+        timeRecord = GameController.instance.GetHighscoreLevel2();
 
         if (timeRecord > 0)
         {
@@ -79,23 +77,23 @@ public class GameplayController : MonoBehaviour {
 
     private void EndLevel()
     {
-        GameController.instance.UnlockedLevel2();
-
         player.enabled = false;
+
+        StartCoroutine(WaitToShowVictoryPanel());
 
         gameTime = (Time.time - tiempoInicial);
 
         if (timeRecord == 0) {
-            GameController.instance.SetHighscoreLevel1(gameTime);
+            GameController.instance.SetHighscoreLevel2(gameTime);
         } else if (gameTime < timeRecord)
         {
-            GameController.instance.SetHighscoreLevel1(gameTime);
+            GameController.instance.SetHighscoreLevel2(gameTime);
         }
 
         scoreText.text = gameTime.ToString();
-        highscoreText.text = GameController.instance.GetHighscoreLevel1().ToString("##.##");
+        highscoreText.text = GameController.instance.GetHighscoreLevel2().ToString("##.##");
 
-        StartCoroutine(WaitToShowVictoryPanel());
+        GameController.instance.UnlockedLevel3();
     }
 
     public void PauseGame()

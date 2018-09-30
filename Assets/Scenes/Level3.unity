@@ -536,6 +536,21 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000798
       objectReference: {fileID: 0}
+    - target: {fileID: 114720348921069632, guid: 2617a56579f8f604292278f98abc20de,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114238198070108782, guid: 2617a56579f8f604292278f98abc20de,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671899125317444, guid: 2617a56579f8f604292278f98abc20de,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToNextLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2617a56579f8f604292278f98abc20de, type: 2}
   m_IsPrefabAsset: 0
@@ -8076,8 +8091,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 720}
+  m_AnchoredPosition: {x: 0.00000095367, y: 0}
+  m_SizeDelta: {x: 1344.8, y: 802.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1397411168
 MonoBehaviour:
@@ -8098,7 +8113,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 27cc64d5df4f53e43a80af6f72ceb62b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff47ab3b108119e46a3f7ef4890de659, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8506,7 +8521,7 @@ GameObject:
   - component: {fileID: 1488141900}
   - component: {fileID: 1488141899}
   m_Layer: 0
-  m_Name: GameplayController
+  m_Name: Level3Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8520,7 +8535,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488141898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84826af255553e040b323c93c6dc6e27, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d788d0ab00325548b4c7b09594be335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   recordText: {fileID: 504247999}
@@ -9407,7 +9422,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1488141899}
+      - m_Target: {fileID: 0}
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -10512,7 +10527,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.64}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10523,7 +10538,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.47, y: 9.61}
+  m_Size: {x: 1.47, y: 2.44}
   m_EdgeRadius: 0
 --- !u!212 &1713275742
 SpriteRenderer:
@@ -10578,7 +10593,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713275740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.29, y: 7.02, z: 0}
+  m_LocalPosition: {x: 6.54, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13228,7 +13243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1488141899}
+      - m_Target: {fileID: 0}
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:

@@ -12,21 +12,20 @@ public class PlayerController : MonoBehaviour {
 
     public delegate void triggerDelegate();
     public event triggerDelegate eliminado, endLevel;
-    
 
-    Rigidbody2D rigidbody;
+    private Rigidbody2D rigidbody;
 
     public Transform ruedaTrasera;
     private float radioRueda;
 
     private bool moveLeft, moveRight, rotateLeft, rotateRight;
 
- 
-    void Start () {
+    private void Start () {
+        
         rigidbody = GetComponent<Rigidbody2D>();
         radioRueda = ruedaTrasera.GetComponent<CircleCollider2D>().radius + 0.01f;
 	}
-	
+
     public void MoveRight()
     {
         if (TocaElSuelo())
@@ -53,31 +52,28 @@ public class PlayerController : MonoBehaviour {
         rigidbody.MoveRotation(rigidbody.rotation + velocidadRotacion * Time.deltaTime);
     }
 
+    private void Update () {
  
-    void Update () {
-
-    
-        if (moveLeft)
-        {
-            MoveLeft();
-        }
-        if (moveRight)
-        {
-            MoveRight();
-        }
-        if (rotateLeft)
-        {
-            RotateLeft();
-        }
-        if (rotateRight)
-        {
-            RotateRight();
-        }
-
-    
+            if (moveLeft)
+            {
+                MoveLeft();
+            }
+            if (moveRight)
+            {
+                MoveRight();
+            }
+            if (rotateLeft)
+            {
+                RotateLeft();
+            }
+            if (rotateRight)
+            {
+                RotateRight();
+            }
+ 
     }
 
-    bool TocaElSuelo() {
+    private bool TocaElSuelo() {
         if (Physics2D.OverlapCircleAll(ruedaTrasera.position, radioRueda).Length > 2)
         {
             Debug.Log("tocando");
@@ -92,12 +88,10 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Finish")
         {
-            Debug.Log("finish");
             if (endLevel != null) endLevel();
 
         } else
         {
-            Debug.Log("Has perdido");
             if (eliminado != null) eliminado();
             anim.SetTrigger("Died");
         }
@@ -108,31 +102,47 @@ public class PlayerController : MonoBehaviour {
     public void MoveLeftDown()
     {
         moveLeft = true;
-        anim.SetTrigger("Moving");
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
     }
+
 
     public void MoveRightDown()
     {
         moveRight = true;
-        anim.SetTrigger("Moving");
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
     }
 
     public void RotateLeftDown()
     {
         rotateLeft = true;
-        anim.SetTrigger("Moving");
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
     }
 
     public void RotateRightDown()
     {
         rotateRight = true;
-        anim.SetTrigger("Moving");
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
     }
 
     public void StopMoving()
     {
         moveLeft = moveRight = rotateLeft = rotateRight = false;
-        anim.SetTrigger("Moving");
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
     }
 
 }//PlayerController
