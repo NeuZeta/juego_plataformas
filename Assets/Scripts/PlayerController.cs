@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    [SerializeField]
+    private Animator anim;
+
     public float velocidadRotacion = 50;
     public float velocidadLineal = 15f;
+
+    public delegate void triggerDelegate();
+    public event triggerDelegate eliminado, endLevel;
+    
+
     Rigidbody2D rigidbody;
 
     public Transform ruedaTrasera;
     private float radioRueda;
 
-   
+    private bool moveLeft, moveRight, rotateLeft, rotateRight;
 
-
-
-
+ 
     void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
         radioRueda = ruedaTrasera.GetComponent<CircleCollider2D>().radius + 0.01f;
@@ -51,19 +57,19 @@ public class PlayerController : MonoBehaviour {
     void Update () {
 
     
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (moveLeft)
         {
             MoveLeft();
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (moveRight)
         {
             MoveRight();
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (rotateLeft)
         {
             RotateLeft();
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (rotateRight)
         {
             RotateRight();
         }
@@ -84,13 +90,50 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject != gameObject)
+        if (collision.gameObject.tag == "Finish")
+        {
+            Debug.Log("finish");
+            if (endLevel != null) endLevel();
+
+        } else
         {
             Debug.Log("Has perdido");
+            if (eliminado != null) eliminado();
+            anim.SetTrigger("Died");
         }
+
     }
 
 
+    public void MoveLeftDown()
+    {
+        moveLeft = true;
+        anim.SetTrigger("Moving");
+    }
+
+    public void MoveRightDown()
+    {
+        moveRight = true;
+        anim.SetTrigger("Moving");
+    }
+
+    public void RotateLeftDown()
+    {
+        rotateLeft = true;
+        anim.SetTrigger("Moving");
+    }
+
+    public void RotateRightDown()
+    {
+        rotateRight = true;
+        anim.SetTrigger("Moving");
+    }
+
+    public void StopMoving()
+    {
+        moveLeft = moveRight = rotateLeft = rotateRight = false;
+        anim.SetTrigger("Moving");
+    }
 
 }//PlayerController
 

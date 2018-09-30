@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 95265523005414098}
   - component: {fileID: 50713498041851164}
   - component: {fileID: 70598106636430998}
-  - component: {fileID: 114382051006042514}
+  - component: {fileID: 114228591228634922}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -102,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946726628054018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.57, y: -2.02, z: 0}
+  m_LocalPosition: {x: -5.65, y: -2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4218677842548960}
@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1765210513987112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.72, y: -0.38, z: 0}
+  m_LocalPosition: {x: -1.21, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4033164692679538}
@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1215600278493390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: -0.44, z: 0}
+  m_LocalPosition: {x: 1.61, y: -0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4033164692679538}
@@ -198,7 +198,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.44
+  m_Radius: 0.46
 --- !u!58 &58347694581698108
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -213,7 +213,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.38
+  m_Radius: 0.46
 --- !u!70 &70355757053629592
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -226,8 +226,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.4}
-  m_Size: {x: 1.75, y: 0.59}
+  m_Offset: {x: 0, y: 0.18}
+  m_Size: {x: 3.62, y: 0.55}
   m_Direction: 1
 --- !u!70 &70598106636430998
 CapsuleCollider2D:
@@ -241,8 +241,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18}
-  m_Size: {x: 2.38, y: 0.92}
+  m_Offset: {x: 0, y: -0.15}
+  m_Size: {x: 4.13, y: 0.74}
   m_Direction: 1
 --- !u!70 &70799478514516058
 CapsuleCollider2D:
@@ -256,7 +256,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: 0.3}
+  m_Offset: {x: -0.5, y: 0.3}
   m_Size: {x: 1, y: 0.64}
   m_Direction: 1
 --- !u!95 &95265523005414098
@@ -268,7 +268,7 @@ Animator:
   m_GameObject: {fileID: 1946726628054018}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8640740695594fc44ac418f4d7b5ce6b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8c39a77dbe768104bb2211b948a12215, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -277,7 +277,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114382051006042514
+--- !u!114 &114228591228634922
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadRotacion: 50
-  velocidadLineal: 10
+  velocidadLineal: 15
   ruedaTrasera: {fileID: 4218677842548960}
 --- !u!212 &212458434861893510
 SpriteRenderer:
@@ -326,7 +326,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300024, guid: b03d54795482874449506f8ce0827f2a, type: 3}
+  m_Sprite: {fileID: 21300024, guid: cafc8a5e75eeac5499c66d09a241dcba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

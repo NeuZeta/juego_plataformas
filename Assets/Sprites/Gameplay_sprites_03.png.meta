@@ -1,35 +1,25 @@
 fileFormatVersion: 2
-guid: 391e2ddcc83eea2409bc54c586c278d4
+guid: cafc8a5e75eeac5499c66d09a241dcba
 TextureImporter:
   fileIDToRecycleName:
-    21300000: terrain_01
-    21300002: terrain_02
-    21300004: terrain_03
-    21300006: terrain_04
-    21300008: terrain_05
-    21300010: terrain_06
-    21300012: terrain_07
-    21300014: terrain_08
-    21300016: terrain_09
-    21300018: terrain_10
-    21300020: terrain_11
-    21300022: Cat_anim_01
-    21300024: Cat_anim_02
-    21300026: Cat_anim_03
-    21300028: Cat_anim_04
-    21300030: Cat_anim_05
-    21300032: Cat_anim_06
-    21300034: terrain1
-    21300036: terrain2
-    21300038: terrain3
-    21300040: terrain4
-    21300042: terrain5
-    21300044: terrain6
-    21300046: terrain7
-    21300048: terrain8
-    21300050: terrain9
-    21300052: terrain10
-    21300054: terrain11
+    21300000: TERR_SQUARE
+    21300002: TERR_HALF_RAMP
+    21300004: TERR_RAMP
+    21300006: TERR_HALF_SQUARE
+    21300008: Gameplay_sprites_03_4
+    21300010: TERR_PLANTS_1
+    21300012: TERR_TOP_1
+    21300014: TERR_TOP_2
+    21300016: TERR_TOP_3
+    21300018: TERR_PLANTS_2
+    21300020: CAT_POSE_DEAD
+    21300022: TERR_TOP_4
+    21300024: CAT_POSE_1
+    21300026: CAT_POSE_2
+    21300028: CAT_POSE_3
+    21300030: CAT_POSE_4
+    21300032: CAT_POSE_5
+    21300034: CAT_POSE_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -134,341 +124,361 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: terrain1
+      name: TERR_SQUARE
       rect:
         serializedVersion: 2
-        x: 0
-        y: 855
-        width: 169
+        x: 1
+        y: 791
+        width: 232
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5a1cce0f4e5ce4eba26abe298e6432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_HALF_RAMP
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 886
+        width: 232
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93345674ea6c672429e41cf16348141a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_RAMP
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 792
+        width: 233
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f5cdd9460a713419a420d32c79deeb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_HALF_SQUARE
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 907
+        width: 231
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171119c702b075140b00e5106c53bc25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gameplay_sprites_03_4
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 872
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b64a48888a7024f8069ad8bf5564ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_PLANTS_1
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 792
+        width: 228
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cefec3a14f8ab4792896fbece04721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_TOP_1
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 792
+        width: 233
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acf47370eb4d5b48a549b8a0537c572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_TOP_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 650
+        width: 232
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a5320e506d32941a4cf96e37587cba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_TOP_3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 648
+        width: 116
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070572f5dafda664fbbde0216b22bdd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_PLANTS_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 649
+        width: 110
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff64ce86732cf5489c61f657d0a024e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CAT_POSE_DEAD
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 548
+        width: 417
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa38f01a0468dc24fa87deb2e73212b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TERR_TOP_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 525
+        width: 232
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5ad7e2b00aa254dbb9a8ce9a31a494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CAT_POSE_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 348
+        width: 416
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba3d723d7a7ab24b8019a55746db3a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CAT_POSE_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 348
+        width: 420
         height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf32d98e50b47644d8cd513d4aa60eb7
+      spriteID: 8f49a3dc21aab294b935f73e9bff2e55
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain2
+      name: CAT_POSE_3
       rect:
         serializedVersion: 2
-        x: 180
-        y: 855
-        width: 169
+        x: 8
+        y: 172
+        width: 417
         height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c46a0361ba41ed4f9cb9be1758c4469
+      spriteID: 68eea3b9e8e08c24fbf18debb838fca7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain3
+      name: CAT_POSE_4
       rect:
         serializedVersion: 2
-        x: 369
-        y: 855
-        width: 169
-        height: 169
+        x: 452
+        y: 175
+        width: 417
+        height: 166
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a01eb4a1d3571a143b7b4b514b7225a8
+      spriteID: 35c03e2114f291f4da0919acb8f7caf8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain4
+      name: CAT_POSE_5
       rect:
         serializedVersion: 2
-        x: 556
-        y: 855
-        width: 169
-        height: 169
+        x: 8
+        y: 0
+        width: 417
+        height: 167
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37722c70f88093a4d870d731713169cf
+      spriteID: 9b7fa3e241a1db349b06e10d23e49bf4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain5
+      name: CAT_POSE_6
       rect:
         serializedVersion: 2
-        x: 740
-        y: 855
-        width: 169
-        height: 169
+        x: 448
+        y: 0
+        width: 417
+        height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb8a3f90ee5951c49bda50608a07017d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain6
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 658
-        width: 169
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc6bdac29c810f34bb4e0a0a4bb47de7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain7
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 658
-        width: 169
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7aa9199865bf6804a8e6da5c3004ccd8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain8
-      rect:
-        serializedVersion: 2
-        x: 556
-        y: 658
-        width: 169
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5517eb5437be46438a5c7563a83d4b2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain9
-      rect:
-        serializedVersion: 2
-        x: 740
-        y: 658
-        width: 169
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2996186465d7b64393fbb9a0560f80a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain10
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 454
-        width: 169
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f909fcbdb0845f2429e20da29d07a09f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain11
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 454
-        width: 169
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce0c9422a2922ea41a3caa5069339d06
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_anim_01
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 225
-        width: 280
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 835091c56954f5d41b38342cd1dbbc6d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_anim_02
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 220
-        width: 280
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3efa5668c1f3674f8cce77fe77aab56
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_anim_03
-      rect:
-        serializedVersion: 2
-        x: 616
-        y: 224
-        width: 280
-        height: 196
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c9115ca6913e1f4bb0f9c81519af018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_anim_04
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 12
-        width: 279
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae1be244d7ff3f44991c30fcae610770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_anim_05
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 12
-        width: 280
-        height: 196
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c338307c9a09414994253fa616933be
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_anim_06
-      rect:
-        serializedVersion: 2
-        x: 616
-        y: 12
-        width: 280
-        height: 197
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f2e05622e70e7c42b2dd74ceeff46f2
+      spriteID: e341d2ed2afad2d428694d38dcf655d3
       vertices: []
       indices: 
       edges: []
@@ -476,7 +486,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8ba1d120cf01596408c76a778be94878
+    spriteID: 6f5659d927de90247ab7fb1395ede7b5
     vertices: []
     indices: 
     edges: []
