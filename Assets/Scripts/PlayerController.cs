@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     public delegate void triggerDelegate();
     public event triggerDelegate eliminado, endLevel;
 
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D rigidBody;
 
     public Transform ruedaTrasera;
     private float radioRueda;
@@ -22,15 +22,15 @@ public class PlayerController : MonoBehaviour {
 
     private void Start () {
         
-        rigidbody = GetComponent<Rigidbody2D>();
-        radioRueda = ruedaTrasera.GetComponent<CircleCollider2D>().radius + 0.01f;
+        rigidBody = GetComponent<Rigidbody2D>();
+        radioRueda = ruedaTrasera.GetComponent<CircleCollider2D>().radius + 0.05f;
 	}
 
     public void MoveRight()
     {
         if (TocaElSuelo())
         {
-            rigidbody.velocity += new Vector2(transform.right.x * velocidadLineal, transform.right.y * velocidadLineal) * Time.deltaTime;
+            rigidBody.velocity += new Vector2(transform.right.x * velocidadLineal, transform.right.y * velocidadLineal) * Time.deltaTime;
         }
     }
 
@@ -38,18 +38,18 @@ public class PlayerController : MonoBehaviour {
     {
         if (TocaElSuelo())
         {
-            rigidbody.velocity -= new Vector2(transform.right.x * velocidadLineal, transform.right.y * velocidadLineal) * Time.deltaTime;
+            rigidBody.velocity -= new Vector2(transform.right.x * velocidadLineal, transform.right.y * velocidadLineal) * Time.deltaTime;
         }
     }
 
     public void RotateRight()
     {
-        rigidbody.MoveRotation(rigidbody.rotation - velocidadRotacion * Time.deltaTime);
+        rigidBody.MoveRotation(rigidBody.rotation - velocidadRotacion * Time.deltaTime);
     }
 
     public void RotateLeft()
     {
-        rigidbody.MoveRotation(rigidbody.rotation + velocidadRotacion * Time.deltaTime);
+        rigidBody.MoveRotation(rigidBody.rotation + velocidadRotacion * Time.deltaTime);
     }
 
     private void Update () {
@@ -74,26 +74,34 @@ public class PlayerController : MonoBehaviour {
     }
 
     private bool TocaElSuelo() {
-        if (Physics2D.OverlapCircleAll(ruedaTrasera.position, radioRueda).Length > 2)
+        if (Physics2D.OverlapCircleAll(ruedaTrasera.position, radioRueda).Length > 3)
         {
-            Debug.Log("tocando");
+            Debug.Log("Toca el suelo");
             return true;
         } else {
-            Debug.Log("flotando");
+            Debug.Log("Está flotando");
             return false;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Finish")
+        if (this.enabled)
         {
-            if (endLevel != null) endLevel();
+            if (collision.gameObject.tag == "Finish")
+            {
+                if (endLevel != null) endLevel();
 
-        } else
-        {
-            if (eliminado != null) eliminado();
-            anim.SetTrigger("Died");
+            }
+            else
+            {
+                if (eliminado != null)
+                {
+                    eliminado();
+                    AudioController.instance.audioSource.PlayOneShot(AudioController.instance.carCrash);
+                    anim.SetTrigger("Died");
+                }
+            }
         }
 
     }
@@ -101,6 +109,7 @@ public class PlayerController : MonoBehaviour {
 
     public void MoveLeftDown()
     {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
         moveLeft = true;
         if (this.enabled)
         {
@@ -111,6 +120,7 @@ public class PlayerController : MonoBehaviour {
 
     public void MoveRightDown()
     {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
         moveRight = true;
         if (this.enabled)
         {
@@ -120,6 +130,7 @@ public class PlayerController : MonoBehaviour {
 
     public void RotateLeftDown()
     {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
         rotateLeft = true;
         if (this.enabled)
         {
@@ -129,6 +140,7 @@ public class PlayerController : MonoBehaviour {
 
     public void RotateRightDown()
     {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
         rotateRight = true;
         if (this.enabled)
         {

@@ -39,16 +39,19 @@ public class MainMenuController : MonoBehaviour {
 
     public void GoToLevel1()
     {
-        SceneFader.instance.FadeIn("Gameplay");
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
+        SceneFader.instance.FadeIn("Level1");
     }
 
     public void GoToLevel2()
     {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
         SceneFader.instance.FadeIn("Level2");
     }
 
     public void GoToLevel3()
     {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
         SceneFader.instance.FadeIn("Level3");
     }
 

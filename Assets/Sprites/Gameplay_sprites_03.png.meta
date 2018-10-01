@@ -20,6 +20,9 @@ TextureImporter:
     21300030: CAT_POSE_4
     21300032: CAT_POSE_5
     21300034: CAT_POSE_6
+    21300036: Cactus_1
+    21300038: Cactus_2
+    21300040: Cactus_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -169,7 +172,7 @@ TextureImporter:
         serializedVersion: 2
         x: 523
         y: 792
-        width: 233
+        width: 232
         height: 232
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -189,7 +192,7 @@ TextureImporter:
         serializedVersion: 2
         x: 792
         y: 907
-        width: 231
+        width: 232
         height: 116
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -249,7 +252,7 @@ TextureImporter:
         serializedVersion: 2
         x: 791
         y: 792
-        width: 233
+        width: 232
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -479,6 +482,66 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e341d2ed2afad2d428694d38dcf655d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus_1
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 526
+        width: 67
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1ce168ce4fd2b4a9c72d833c630916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 527
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fd0df9cd8ad454da36ea28b8d23a85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cactus_3
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 527
+        width: 66
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d7c1bd7ede834468bf4c3d9325a72d
       vertices: []
       indices: 
       edges: []
