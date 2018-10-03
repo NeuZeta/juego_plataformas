@@ -22,7 +22,7 @@ TextureImporter:
     21300034: CAT_POSE_6
     21300036: Cactus_1
     21300038: Cactus_2
-    21300040: Cactus_3
+    21300040: Drop
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -495,7 +495,7 @@ TextureImporter:
         width: 67
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -515,7 +515,7 @@ TextureImporter:
         width: 69
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -527,15 +527,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cactus_3
+      name: Drop
       rect:
         serializedVersion: 2
-        x: 487
-        y: 527
-        width: 66
-        height: 97
+        x: 508
+        y: 559
+        width: 16
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

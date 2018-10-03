@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameplayController : MonoBehaviour {
     private PlayerController player;
+    private GameObject[] birds;
+    private BirdScript birdScript;
 
     public Text recordText;
     public Button startBtn, countdownBtn, pauseBtn, resumeBtn, quitBtn, backBtn, replayBtn, nextBtn;
@@ -43,9 +45,19 @@ public class GameplayController : MonoBehaviour {
         currentLevel = SceneManager.GetActiveScene().name;
 
         player = GameObject.Find("Player").GetComponent<PlayerController>();
+        if (birds == null)
+        {
+            birds = GameObject.FindGameObjectsWithTag("Bird");
+        }
+
         player.eliminado += RestartGame;
         player.endLevel += EndLevel;
         player.enabled = false;
+        foreach (GameObject bird in birds)
+        {
+            birdScript = bird.GetComponent<BirdScript>();
+            birdScript.enabled = false;
+        }
         mainText = countdownBtn.GetComponentInChildren<Text>();
 
         if (currentLevel == "Level1")
@@ -192,6 +204,12 @@ public class GameplayController : MonoBehaviour {
         player.enabled = true;
         tiempoInicial = Time.time;
         mainText.alignment = TextAnchor.MiddleLeft;
+
+        foreach (GameObject bird in birds)
+        {
+            birdScript = bird.GetComponent<BirdScript>();
+            birdScript.enabled = true;
+        }
     }
 
     private void Update()

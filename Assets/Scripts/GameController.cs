@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour {
 
     private void IsGameStartedForTheFirstTime()
     {
+        //PlayerPrefs.DeleteKey("IsTheGameStartedForTheFirstTime");
+
         if (!PlayerPrefs.HasKey("IsTheGameStartedForTheFirstTime"))
         {
             PlayerPrefs.SetFloat(HIGHSCORE_LEVEL1, 0f);

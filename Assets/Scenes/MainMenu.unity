@@ -1228,6 +1228,7 @@ MonoBehaviour:
   click: {fileID: 8300000, guid: c05fd897319bb2443930f86c96e26560, type: 3}
   carCrash: {fileID: 8300000, guid: 108a281cd621cf247b899ed38afbd541, type: 3}
   cheer: {fileID: 8300000, guid: 328c8a01c283c6e44a3dfc1ded879397, type: 3}
+  uhoh: {fileID: 8300000, guid: b99ea106c99462d4bb4f11a62db2be5c, type: 3}
 --- !u!4 &1670244910
 Transform:
   m_ObjectHideFlags: 0

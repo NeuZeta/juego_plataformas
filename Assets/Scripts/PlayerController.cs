@@ -20,10 +20,12 @@ public class PlayerController : MonoBehaviour {
 
     private bool moveLeft, moveRight, rotateLeft, rotateRight;
 
+    public float disabledTime = 2f;
+
     private void Start () {
         
         rigidBody = GetComponent<Rigidbody2D>();
-        radioRueda = ruedaTrasera.GetComponent<CircleCollider2D>().radius + 0.05f;
+        radioRueda = ruedaTrasera.GetComponent<CircleCollider2D>().radius;
 	}
 
     public void MoveRight()
@@ -74,7 +76,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private bool TocaElSuelo() {
-        if (Physics2D.OverlapCircleAll(ruedaTrasera.position, radioRueda).Length > 3)
+        if (Physics2D.OverlapCircleAll(ruedaTrasera.position, radioRueda * 1.1f).Length > 2)
         {
             Debug.Log("Toca el suelo");
             return true;
@@ -93,7 +95,15 @@ public class PlayerController : MonoBehaviour {
                 if (endLevel != null) endLevel();
 
             }
-            else
+            else if (collision.gameObject.tag == "Drop")
+            {
+                if (this.enabled) { 
+                StartCoroutine("DisablePlayerForSomeTime");
+                StopMoving();
+                AudioController.instance.audioSource.PlayOneShot(AudioController.instance.uhoh);
+                }
+            }
+            else 
             {
                 if (eliminado != null)
                 {
@@ -148,14 +158,59 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void StopMoving()
+    public void MoveLeftUp()
     {
-        moveLeft = moveRight = rotateLeft = rotateRight = false;
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
+        moveLeft = false;
         if (this.enabled)
         {
             anim.SetTrigger("Moving");
         }
     }
+
+
+    public void MoveRightUp()
+    {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
+        moveRight = false;
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
+    }
+
+    public void RotateLeftUp()
+    {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
+        rotateLeft = false;
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
+    }
+
+    public void RotateRightUp()
+    {
+        AudioController.instance.audioSource.PlayOneShot(AudioController.instance.click);
+        rotateRight = false;
+        if (this.enabled)
+        {
+            anim.SetTrigger("Moving");
+        }
+    }
+
+    IEnumerator DisablePlayerForSomeTime()
+    {
+        rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+        yield return new WaitForSeconds(disabledTime);
+        rigidBody.constraints = RigidbodyConstraints2D.None;
+    }
+
+    void StopMoving()
+    {
+        moveLeft = moveRight = rotateLeft = rotateRight = false;
+    }
+
 
 }//PlayerController
 

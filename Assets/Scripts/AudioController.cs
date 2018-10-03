@@ -7,7 +7,7 @@ public class AudioController : MonoBehaviour {
     public static AudioController instance;
 
     public AudioSource audioSource;
-    public AudioClip click, carCrash, cheer;
+    public AudioClip click, carCrash, cheer, uhoh;
 
 	
 	void Awake () {
